@@ -1,0 +1,8 @@
+{
+  "recognition_threshold": 1.0480196475982666,
+  "unknown_threshold": 1.2576236724853516,
+  "intra_class_mean": 0.5865195393562317,
+  "intra_class_std": 0.2678583264350891,
+  "inter_class_mean": 1.5095196962356567,
+  "inter_class_std": 0.07423453032970428
+}

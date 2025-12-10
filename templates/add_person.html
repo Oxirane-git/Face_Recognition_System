@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Person - Face Recognition System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="nav-content">
+            <div class="nav-title">🎭 Face Recognition System</div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Recognize</a>
+                <a href="/add-person" class="nav-link active">Add Person</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Add Person Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2>➕ Register New Person</h2>
+                <p class="subtitle">Upload multiple images of a person to add them to the database</p>
+            </div>
+
+            <form id="addPersonForm" onsubmit="registerPerson(event)">
+                <div class="form-group">
+                    <label for="personName" class="form-label">Person Name / ID *</label>
+                    <input 
+                        type="text" 
+                        id="personName" 
+                        name="name" 
+                        class="form-input" 
+                        placeholder="Enter person's name or ID"
+                        required
+                    >
+                    <div class="form-hint">Use a unique identifier (e.g., employee ID, name)</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Upload Images *</label>
+                    <div class="upload-area multiple" id="uploadArea" onclick="document.getElementById('filesInput').click()">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">
+                            <span class="upload-primary">Click to select images</span>
+                            <span class="upload-secondary">or drag and drop multiple files</span>
+                        </div>
+                        <div class="upload-formats">PNG, JPG, JPEG, GIF, WEBP (multiple files allowed)</div>
+                    </div>
+                    <input 
+                        type="file" 
+                        id="filesInput" 
+                        accept="image/*" 
+                        multiple 
+                        style="display:none" 
+                        onchange="handleMultipleFilesSelect(event)"
+                    >
+                    
+                    <div class="files-preview" id="filesPreview">
+                        <!-- Selected files will be displayed here -->
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-icon">💾</span>
+                        Register Person
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="clearForm()">
+                        <span class="btn-icon">🗑️</span>
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+
+            <!-- Result Message -->
+            <div class="result-message" id="resultMessage" style="display:none;">
+                <div class="message-content" id="messageContent"></div>
+            </div>
+        </div>
+
+        <!-- Info Card -->
+        <div class="card info-card">
+            <div class="card-header">
+                <h3>ℹ️ Instructions</h3>
+            </div>
+            <ul class="info-list">
+                <li>📝 Provide a unique name or ID for the person</li>
+                <li>📷 Upload 3-10 clear face images of the same person</li>
+                <li>✨ Use images with good lighting and different angles</li>
+                <li>⚠️ After uploading, use the notebook to register the person in the database</li>
+                <li>🔄 Images are saved temporarily and can be processed later</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

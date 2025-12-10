@@ -1,0 +1,22 @@
+{
+  "person_name": "8750533000",
+  "num_images": 16,
+  "embedding_files": [
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug11.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug9.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug10.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug17.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug8.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug14.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug20.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug1.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug15.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug2.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug16.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug18.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug13.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug3.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001_aug5.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750533000/8750533000_D316409001.npy"
+  ]
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceArt® - Features</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">FaceArt®</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('features') }}" class="nav-link active">Features</a>
+            <a href="{{ url_for('try_now') }}" class="nav-link">Try Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="features-container">
+            <h1 class="features-title">Features</h1>
+            
+            <div class="features-grid">
+                <!-- Add New Person Card -->
+                <div class="feature-card">
+                    <h2 class="feature-card-title">Add New Person</h2>
+                    <p class="feature-card-description">Upload individual images to register a new person in the system.</p>
+                    
+                    <form id="addPersonForm" class="feature-form">
+                        <div class="form-group">
+                            <label for="personName" class="form-label">Person Name / ID</label>
+                            <input 
+                                type="text" 
+                                id="personName" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Enter person's name or ID"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Upload Images</label>
+                            <div class="upload-area feature-upload" id="personUploadArea" onclick="document.getElementById('personFiles').click()">
+                                <div class="upload-text">
+                                    <span class="upload-primary">Click to select images</span>
+                                    <span class="upload-secondary">or drag and drop</span>
+                                </div>
+                            </div>
+                            <input 
+                                type="file" 
+                                id="personFiles" 
+                                accept="image/*" 
+                                multiple 
+                                style="display:none" 
+                                onchange="handlePersonFiles(event)"
+                            >
+                            <div class="files-preview" id="personFilesPreview"></div>
+                        </div>
+
+                        <button type="submit" class="btn-fill feature-btn">Register Person</button>
+                    </form>
+
+                    <div class="result-message" id="addPersonResult" style="display:none;"></div>
+                </div>
+
+                <!-- Add Complete Folder Card -->
+                <div class="feature-card">
+                    <h2 class="feature-card-title">Add Complete Folder</h2>
+                    <p class="feature-card-description">Upload a ZIP file containing folders. Each folder will be treated as a separate person class, with images inside each folder.</p>
+                    
+                    <form id="addFolderForm" class="feature-form">
+                        <div class="form-group">
+                            <label class="form-label">Upload ZIP File</label>
+                            <div class="upload-area feature-upload" id="folderUploadArea" onclick="document.getElementById('folderFile').click()">
+                                <div class="upload-text">
+                                    <span class="upload-primary">Click to select ZIP file</span>
+                                    <span class="upload-secondary">or drag and drop</span>
+                                </div>
+                            </div>
+                            <input 
+                                type="file" 
+                                id="folderFile" 
+                                accept=".zip" 
+                                style="display:none" 
+                                onchange="handleFolderFile(event)"
+                            >
+                            <div class="file-info" id="folderFileInfo" style="display:none;">
+                                <span id="folderFileName"></span>
+                                <button type="button" class="remove-file-btn" onclick="clearFolderFile()">Remove</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-fill feature-btn">Process Folder</button>
+                    </form>
+
+                    <div class="result-message" id="addFolderResult" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

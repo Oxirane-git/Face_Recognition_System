@@ -1,0 +1,56 @@
+# ============================================
+# Face Recognition System - Complete Requirements
+# ============================================
+# This file includes all dependencies for the entire project:
+# - FastAPI Web Application Backend
+# - Face Recognition System (YOLOv8-Face + InsightFace + ArcFace)
+# - Data Processing and Visualization
+# ============================================
+
+# ============================================
+# Web Framework & Server
+# ============================================
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+jinja2==3.1.2
+python-multipart==0.0.6
+starlette>=0.27.0
+
+# ============================================
+# Image Processing
+# ============================================
+Pillow==10.1.0
+opencv-python==4.8.1.78
+
+# ============================================
+# Machine Learning & Face Recognition
+# ============================================
+ultralytics==8.1.0
+insightface==0.7.3
+onnxruntime==1.16.3
+scikit-learn==1.3.2
+
+# ============================================
+# Data Processing & Scientific Computing
+# ============================================
+numpy==1.26.2
+pandas==2.1.4
+
+# ============================================
+# Data Visualization
+# ============================================
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ============================================
+# Utilities
+# ============================================
+tqdm==4.66.1
+
+# ============================================
+# Optional: For Production Deployment
+# ============================================
+# Uncomment if deploying to production:
+# gunicorn==21.2.0
+# python-dotenv==1.0.0
+

@@ -1,0 +1,12 @@
+{
+  "person_name": "8750554512",
+  "num_images": 6,
+  "embedding_files": [
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750554512/8750554512_A08A0HGLCL_aug1.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750554512/8750554512_A08A0HGLCL_aug15.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750554512/8750554512_A08A0HGLCL_aug11.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750554512/8750554512_A08A0HGLCL_aug8.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750554512/8750554512_A08A0HGLCL_aug19.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750554512/8750554512_A08A0HGLCL.npy"
+  ]
+}

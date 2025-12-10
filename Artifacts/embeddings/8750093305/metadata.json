@@ -1,0 +1,9 @@
+{
+  "person_name": "8750093305",
+  "num_images": 3,
+  "embedding_files": [
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750093305/8750093305_A08A0HG7QR_UIDAI_aug18.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750093305/8750093305_A08A0HG7QR_UIDAI_aug5.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750093305/8750093305_A08A0HG7QR_UIDAI_aug17.npy"
+  ]
+}

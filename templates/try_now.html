@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceArt® - Try Now</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">FaceArt®</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('features') }}" class="nav-link">Features</a>
+            <a href="{{ url_for('try_now') }}" class="nav-link active">Try Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="try-now-container">
+            <h1 class="try-now-title">Test Face Recognition.</h1>
+            <p class="try-now-subtitle">Try image upload and face detection.</p>
+            
+            <!-- Upload Area -->
+            <div class="upload-section">
+                <div class="upload-area-large" id="uploadArea" onclick="document.getElementById('imageFile').click()">
+                    <div class="upload-text">
+                        <span class="upload-primary">Click to upload</span>
+                        <span class="upload-secondary">or drag and drop</span>
+                    </div>
+                </div>
+                <input type="file" id="imageFile" accept="image/*" style="display:none" onchange="handleImageFile(event)">
+            </div>
+            
+            <!-- Preview -->
+            <div class="preview-section" id="previewSection" style="display:none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+                <button class="remove-btn" onclick="clearPreview()">×</button>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-outline" id="recognizeBtn" onclick="recognizeFace()" disabled>Recognize Face</button>
+                <button class="btn-fill" onclick="clearAll()">Clear</button>
+            </div>
+            
+            <!-- Results -->
+            <div class="results-section" id="resultsSection" style="display:none;">
+                <h2 class="results-title">Recognition Results</h2>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display:none;">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Processing image...</div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

@@ -1,0 +1,6 @@
+{
+  "classifier_type": "KNN",
+  "cv_score_mean": 0.9969133821512969,
+  "num_classes": 104,
+  "num_samples": 2268
+}

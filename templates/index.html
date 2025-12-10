@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceArt® - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">FaceArt®</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-link active">Home</a>
+            <a href="{{ url_for('features') }}" class="nav-link">Features</a>
+            <a href="{{ url_for('try_now') }}" class="nav-link">Try Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="home-container">
+            <!-- Icon -->
+            <div class="home-icon">
+                <div class="icon-square"></div>
+                <div class="icon-circle"></div>
+                <div class="icon-triangle"></div>
+            </div>
+            
+            <!-- Heading -->
+            <h1 class="home-title">Test Face Recognition.</h1>
+            
+            <!-- Subtitle -->
+            <p class="home-subtitle">Try image upload and face detection.</p>
+            
+            <!-- Action Buttons -->
+            <div class="home-actions">
+                <a href="{{ url_for('try_now') }}" class="btn-outline">Upload Image</a>
+            </div>
+            
+            <!-- Features Grid Section -->
+            <div class="features-grid-section">
+                <div class="feature-grid-item">
+                    <div class="feature-text">
+                        <h2 class="feature-heading">Real-time detection</h2>
+                        <p class="feature-description">Detect faces instantly with high accuracy using advanced AI models and modern art visuals.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-grid-item">
+                    <div class="feature-visual">
+                        <img src="{{ url_for('serve_gif', filename='adf3f3a5acf468eb1a2e23849ddbe4ec.gif') }}" alt="Real-time Detection" class="feature-gif">
+                    </div>
+                </div>
+                
+                <div class="feature-grid-item">
+                    <div class="feature-visual">
+                        <video autoplay loop muted playsinline class="feature-video">
+                            <source src="{{ url_for('serve_gif', filename='Blue_Animated_Person_Icons_Video.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                
+                <div class="feature-grid-item">
+                    <div class="feature-text">
+                        <h2 class="feature-heading">Add person</h2>
+                        <p class="feature-description">Easily register new individuals to the database by uploading multiple images. The system automatically processes faces, extracts embeddings, and retrains the classifier for accurate recognition. Support for both individual person registration and bulk folder-based registration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action Section -->
+            <div class="cta-section">
+                <div class="cta-video-background">
+                    <video autoplay loop muted playsinline class="cta-video">
+                        <source src="{{ url_for('serve_gif', filename='Face_Detection_GIF_Creation_Request.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="cta-video-overlay"></div>
+                </div>
+                <div class="cta-content">
+                    <h2 class="cta-heading">Try FaceArt now!</h2>
+                    <p class="cta-subheading">Experience next-gen face recognition first hand.</p>
+                    <a href="{{ url_for('try_now') }}" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

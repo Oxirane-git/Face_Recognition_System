@@ -1,0 +1,11 @@
+{
+  "person_name": "8750445630",
+  "num_images": 5,
+  "embedding_files": [
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750445630/8750445630_A08A0HFTSW_aug5.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750445630/8750445630_A08A0HFTSW_UIDAI_aug6.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750445630/8750445630_A08A0HFTSW_aug14.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750445630/8750445630_A08A0HFTSW_UIDAI_aug10.npy",
+    "/mnt/NewDisk/sahil_project/FRS copy/Artifacts/embeddings/8750445630/8750445630_A08A0HFTSW_aug17.npy"
+  ]
+}
