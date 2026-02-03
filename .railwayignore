@@ -1,0 +1,12 @@
+*.ipynb
+Notebook/
+Project Documentation/
+Gifs/
+*.md
+.git/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env.local

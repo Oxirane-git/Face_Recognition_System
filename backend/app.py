@@ -568,16 +568,19 @@ async def serve_gif(filename: str):
 
 if __name__ == '__main__':
     import uvicorn
-    
+
     if face_system is None:
         print("⚠️ Warning: Face recognition system not initialized. Some features may not work.")
-    
+
+    # Get port from environment variable (for Railway/cloud deployment) or default to 8000
+    port = int(os.environ.get("PORT", 8000))
+
     print("\n" + "="*60)
     print("🚀 Starting Face Recognition Web Application")
     print("="*60)
     print(f"📁 Base directory: {BASE_DIR}")
-    print(f"🌐 Server will run on http://127.0.0.1:8000")
+    print(f"🌐 Server will run on http://0.0.0.0:{port}")
     print("="*60 + "\n")
-    
+
     # Run app directly (app is already imported)
-    uvicorn.run(app, host="127.0.0.1", port=8000, reload=False)
+    uvicorn.run(app, host="0.0.0.0", port=port, reload=False)
