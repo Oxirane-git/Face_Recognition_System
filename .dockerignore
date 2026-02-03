@@ -1,0 +1,16 @@
+.git/
+__pycache__/
+*.pyc
+*.pyo
+*.ipynb
+Notebook/
+Project Documentation/
+.env
+.env.local
+.venv/
+venv/
+env/
+*.md
+.DS_Store
+.gitignore
+.railwayignore
