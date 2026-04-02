@@ -35,6 +35,16 @@ if [ ! -f "yolov8n-face.pt" ]; then
     echo "The model will need to be downloaded on first run."
 fi
 
+# Load environments
+if [ -f ".env.example" ] && [ ! -f ".env" ]; then
+    echo "🔧 Copying .env.example to .env"
+    cp .env.example .env
+fi
+
+if [ -f ".env" ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
+
 # Create uploads directory if it doesn't exist
 mkdir -p static/uploads
 

@@ -52,5 +52,5 @@ tqdm==4.66.1
 # ============================================
 # Uncomment if deploying to production:
 # gunicorn==21.2.0
-# python-dotenv==1.0.0
+python-dotenv==1.0.0
 
